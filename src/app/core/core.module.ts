@@ -6,21 +6,27 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SubNavbarComponent } from './sub-navbar/sub-navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
+import { NavbarItemComponent } from './components/clarity/nav-item';
+import { NavbarHeaderComponent } from './components/clarity/nav-header';
+import { NavbarBrandingComponent } from './components/clarity/nav-branding';
+
+
+export const COMPONENTS =[
+  NavbarItemComponent,
+  NavbarHeaderComponent,
+  NavbarBrandingComponent,
+  NavbarComponent,
+  SubNavbarComponent,
+  SidenavComponent
+]
+
 @NgModule({
   imports: [
-    CommonModule, 
+    CommonModule,
     RouterModule,
     ClarityModule
   ],
-  declarations: [
-    NavbarComponent,
-    SubNavbarComponent,
-    SidenavComponent
-  ],
-  exports: [
-    NavbarComponent,
-    SubNavbarComponent,
-    SidenavComponent
-  ]
+  declarations: COMPONENTS,
+  exports: COMPONENTS
 })
 export class CoreModule { }
